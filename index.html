@@ -336,17 +336,16 @@
   if (d < 140) moveNo(x, y);
 }
 
-// mus
-zone.addEventListener("pointermove", e => {
+    zone.addEventListener("pointermove", e => {
   handleMove(e.clientX, e.clientY);
 });
 
-// touch
-zone.addEventListener("touchmove", e => {
+  zone.addEventListener("touchmove", e => {
   if (e.touches.length > 0) {
     handleMove(e.touches[0].clientX, e.touches[0].clientY);
   }
 }, { passive: false });
+
 
     noBtn.addEventListener("click", e => e.preventDefault());
 
