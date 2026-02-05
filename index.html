@@ -327,14 +327,26 @@
       growYes();
     }
 
-    zone.addEventListener("pointermove", e => {
-      const b = noBtn.getBoundingClientRect();
-      const d = Math.hypot(
-        (b.left + b.width / 2) - e.clientX,
-        (b.top + b.height / 2) - e.clientY
-      );
-      if (d < 140) moveNo(e.clientX, e.clientY);
-    });
+    function handleMove(x, y) {
+  const b = noBtn.getBoundingClientRect();
+  const d = Math.hypot(
+    (b.left + b.width / 2) - x,
+    (b.top + b.height / 2) - y
+  );
+  if (d < 140) moveNo(x, y);
+}
+
+// mus
+zone.addEventListener("pointermove", e => {
+  handleMove(e.clientX, e.clientY);
+});
+
+// touch
+zone.addEventListener("touchmove", e => {
+  if (e.touches.length > 0) {
+    handleMove(e.touches[0].clientX, e.touches[0].clientY);
+  }
+}, { passive: false });
 
     noBtn.addEventListener("click", e => e.preventDefault());
 
