@@ -135,7 +135,53 @@
 
   <main class="card">
     <!-- ANIMAL WITH HEART -->
-    <svg class="art" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+    <svg class="art" viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- shadow -->
+  <ellipse cx="160" cy="235" rx="75" ry="12" fill="#000" opacity="0.08"/>
+
+  <!-- ears (floppy dog ears) -->
+  <path d="M95 105 C70 95 70 60 105 65 C115 80 115 100 95 105 Z" fill="#8b5a2b"/>
+  <path d="M225 105 C250 95 250 60 215 65 C205 80 205 100 225 105 Z" fill="#8b5a2b"/>
+
+  <!-- head -->
+  <ellipse cx="160" cy="125" rx="70" ry="60" fill="#c58a4a"/>
+
+  <!-- longer snout -->
+  <ellipse cx="160" cy="155" rx="50" ry="30" fill="#e8b77a"/>
+
+  <!-- nose -->
+  <ellipse cx="160" cy="150" rx="12" ry="8" fill="#222"/>
+
+  <!-- mouth lines -->
+  <path d="M160 158 L160 168" stroke="#5a3a1a" stroke-width="3"/>
+  <path d="M160 168 Q150 175 140 168" stroke="#5a3a1a" stroke-width="3" fill="none"/>
+  <path d="M160 168 Q170 175 180 168" stroke="#5a3a1a" stroke-width="3" fill="none"/>
+
+  <!-- eyes -->
+  <ellipse cx="135" cy="120" rx="7" ry="9" fill="#222"/>
+  <ellipse cx="185" cy="120" rx="7" ry="9" fill="#222"/>
+
+  <!-- eye shine -->
+  <circle cx="138" cy="118" r="2" fill="#fff"/>
+  <circle cx="188" cy="118" r="2" fill="#fff"/>
+
+  <!-- paws -->
+  <ellipse cx="125" cy="200" rx="22" ry="16" fill="#b97a3d"/>
+  <ellipse cx="195" cy="200" rx="22" ry="16" fill="#b97a3d"/>
+
+  <!-- heart between paws -->
+  <path d="
+    M160 185
+    C150 165 120 170 120 195
+    C120 220 160 230 160 230
+    C160 230 200 220 200 195
+    C200 170 170 165 160 185 Z"
+    fill="#ff3b7a"
+  />
+
+</svg>
+
       <defs>
         <linearGradient id="fur" x1="0" x2="1">
           <stop offset="0" stop-color="#f7c7a1"/>
@@ -183,7 +229,7 @@
     <div class="hint" id="hint">“Nei” ser ut til å være litt sjenert 😈</div>
 
     <section class="result" id="result">
-      <h2>YAY! 🎉</h2>
+      <h2>YEY! 🎉</h2>
       <img
         class="fireworks"
         src="https://media.tenor.com/XZqcuBcpmmkAAAAM/penguins-win.gif"
@@ -301,6 +347,7 @@
   </script>
 </body>
 </html>
+
 
 
 
